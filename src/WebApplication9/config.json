@@ -1,0 +1,8 @@
+﻿{
+  "AppSettings": {
+    "SiteEmailAddress": "thilankaranasinghe1989@gmail.com"
+  },
+  "Data": {
+    "PortContextConnection": "Server=THILANKA-LAP;Database=Portfolio.;Trusted_Connection=true;MultipleActiveRecordSet=true"
+  }
+}

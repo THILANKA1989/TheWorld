@@ -1,0 +1,29 @@
+﻿<div class="row">
+    <div class="col-md-4 top-sm-marg" ng-repeat="doctor in vm.Doctor">
+        <div class="book-card  background-grey">
+            <div class="row top-xs-marg">
+                <div class="col-xs-5">
+                    <img class="img-responsive" src="../../images/default.jpg" />
+                </div>
+                <div class="col-xs-7">
+                    <p class="color-black">{{doctor.id}}</p>
+                    <p class="color-black">Description: {{doctor.DoctorName}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form novalidate name="newDoctorForm" ng-submit="vm.addDoctor()">
+        <div class="form-group">
+            <label for="DoctorName">DoctorName</label>
+            <input class="form-control" type="text" id="DoctorName" name="DoctorName" ng-model="vm.newDoctor.doctorName" required ng-minlength="6" />
+            <span ng-show="newDoctorForm.DoctorName.$error.required" class="text-warning">Name is required.</span>
+            <span ng-show="newDoctorForm.DoctorName.$error.minlength" class="text-warning">Name must be at least five characters.</span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Add"
+                   class="btn btn-success btn-sm"
+                   ng-disabled="newDoctorForm.$invalid" />
+        </div>
+    </form>
+</div>
